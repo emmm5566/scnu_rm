@@ -1,0 +1,6 @@
+/home/emmm/Desktop/ROS2/fishros/chapter2/session2/build/CMakeFiles/ros2_cpp_node.dir
+/home/emmm/Desktop/ROS2/fishros/chapter2/session2/build/CMakeFiles/uninstall.dir
+/home/emmm/Desktop/ROS2/fishros/chapter2/session2/build/CMakeFiles/ros2_cpp_uninstall.dir
+/home/emmm/Desktop/ROS2/fishros/chapter2/session2/build/CMakeFiles/test.dir
+/home/emmm/Desktop/ROS2/fishros/chapter2/session2/build/CMakeFiles/edit_cache.dir
+/home/emmm/Desktop/ROS2/fishros/chapter2/session2/build/CMakeFiles/rebuild_cache.dir
