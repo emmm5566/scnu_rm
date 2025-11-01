@@ -220,6 +220,130 @@ morphology/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/morphology.dir/build.make CMakeFiles/morphology.dir/build
 .PHONY : morphology/fast
 
+#=============================================================================
+# Target rules for targets named contours
+
+# Build rule for target.
+contours: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 contours
+.PHONY : contours
+
+# fast build rule for target.
+contours/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/contours.dir/build.make CMakeFiles/contours.dir/build
+.PHONY : contours/fast
+
+#=============================================================================
+# Target rules for targets named RotatedRect
+
+# Build rule for target.
+RotatedRect: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 RotatedRect
+.PHONY : RotatedRect
+
+# fast build rule for target.
+RotatedRect/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RotatedRect.dir/build.make CMakeFiles/RotatedRect.dir/build
+.PHONY : RotatedRect/fast
+
+#=============================================================================
+# Target rules for targets named approxPolyDP
+
+# Build rule for target.
+approxPolyDP: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 approxPolyDP
+.PHONY : approxPolyDP
+
+# fast build rule for target.
+approxPolyDP/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/approxPolyDP.dir/build.make CMakeFiles/approxPolyDP.dir/build
+.PHONY : approxPolyDP/fast
+
+#=============================================================================
+# Target rules for targets named API
+
+# Build rule for target.
+API: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 API
+.PHONY : API
+
+# fast build rule for target.
+API/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/API.dir/build.make CMakeFiles/API.dir/build
+.PHONY : API/fast
+
+src/API.o: src/API.cpp.o
+.PHONY : src/API.o
+
+# target to build an object file
+src/API.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/API.dir/build.make CMakeFiles/API.dir/src/API.cpp.o
+.PHONY : src/API.cpp.o
+
+src/API.i: src/API.cpp.i
+.PHONY : src/API.i
+
+# target to preprocess a source file
+src/API.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/API.dir/build.make CMakeFiles/API.dir/src/API.cpp.i
+.PHONY : src/API.cpp.i
+
+src/API.s: src/API.cpp.s
+.PHONY : src/API.s
+
+# target to generate assembly for a file
+src/API.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/API.dir/build.make CMakeFiles/API.dir/src/API.cpp.s
+.PHONY : src/API.cpp.s
+
+src/RotatedRect.o: src/RotatedRect.cpp.o
+.PHONY : src/RotatedRect.o
+
+# target to build an object file
+src/RotatedRect.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RotatedRect.dir/build.make CMakeFiles/RotatedRect.dir/src/RotatedRect.cpp.o
+.PHONY : src/RotatedRect.cpp.o
+
+src/RotatedRect.i: src/RotatedRect.cpp.i
+.PHONY : src/RotatedRect.i
+
+# target to preprocess a source file
+src/RotatedRect.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RotatedRect.dir/build.make CMakeFiles/RotatedRect.dir/src/RotatedRect.cpp.i
+.PHONY : src/RotatedRect.cpp.i
+
+src/RotatedRect.s: src/RotatedRect.cpp.s
+.PHONY : src/RotatedRect.s
+
+# target to generate assembly for a file
+src/RotatedRect.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/RotatedRect.dir/build.make CMakeFiles/RotatedRect.dir/src/RotatedRect.cpp.s
+.PHONY : src/RotatedRect.cpp.s
+
+src/approxPolyDP.o: src/approxPolyDP.cpp.o
+.PHONY : src/approxPolyDP.o
+
+# target to build an object file
+src/approxPolyDP.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/approxPolyDP.dir/build.make CMakeFiles/approxPolyDP.dir/src/approxPolyDP.cpp.o
+.PHONY : src/approxPolyDP.cpp.o
+
+src/approxPolyDP.i: src/approxPolyDP.cpp.i
+.PHONY : src/approxPolyDP.i
+
+# target to preprocess a source file
+src/approxPolyDP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/approxPolyDP.dir/build.make CMakeFiles/approxPolyDP.dir/src/approxPolyDP.cpp.i
+.PHONY : src/approxPolyDP.cpp.i
+
+src/approxPolyDP.s: src/approxPolyDP.cpp.s
+.PHONY : src/approxPolyDP.s
+
+# target to generate assembly for a file
+src/approxPolyDP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/approxPolyDP.dir/build.make CMakeFiles/approxPolyDP.dir/src/approxPolyDP.cpp.s
+.PHONY : src/approxPolyDP.cpp.s
+
 src/binary.o: src/binary.cpp.o
 .PHONY : src/binary.o
 
@@ -267,6 +391,30 @@ src/channel_demo.s: src/channel_demo.cpp.s
 src/channel_demo.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/channel_demo.dir/build.make CMakeFiles/channel_demo.dir/src/channel_demo.cpp.s
 .PHONY : src/channel_demo.cpp.s
+
+src/contours.o: src/contours.cpp.o
+.PHONY : src/contours.o
+
+# target to build an object file
+src/contours.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/contours.dir/build.make CMakeFiles/contours.dir/src/contours.cpp.o
+.PHONY : src/contours.cpp.o
+
+src/contours.i: src/contours.cpp.i
+.PHONY : src/contours.i
+
+# target to preprocess a source file
+src/contours.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/contours.dir/build.make CMakeFiles/contours.dir/src/contours.cpp.i
+.PHONY : src/contours.cpp.i
+
+src/contours.s: src/contours.cpp.s
+.PHONY : src/contours.s
+
+# target to generate assembly for a file
+src/contours.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/contours.dir/build.make CMakeFiles/contours.dir/src/contours.cpp.s
+.PHONY : src/contours.cpp.s
 
 src/demo.o: src/demo.cpp.o
 .PHONY : src/demo.o
@@ -420,20 +568,36 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... API"
+	@echo "... RotatedRect"
+	@echo "... approxPolyDP"
 	@echo "... binary"
 	@echo "... channel_demo"
+	@echo "... contours"
 	@echo "... demo"
 	@echo "... demo1"
 	@echo "... demo2"
 	@echo "... gray"
 	@echo "... learn_Mat"
 	@echo "... morphology"
+	@echo "... src/API.o"
+	@echo "... src/API.i"
+	@echo "... src/API.s"
+	@echo "... src/RotatedRect.o"
+	@echo "... src/RotatedRect.i"
+	@echo "... src/RotatedRect.s"
+	@echo "... src/approxPolyDP.o"
+	@echo "... src/approxPolyDP.i"
+	@echo "... src/approxPolyDP.s"
 	@echo "... src/binary.o"
 	@echo "... src/binary.i"
 	@echo "... src/binary.s"
 	@echo "... src/channel_demo.o"
 	@echo "... src/channel_demo.i"
 	@echo "... src/channel_demo.s"
+	@echo "... src/contours.o"
+	@echo "... src/contours.i"
+	@echo "... src/contours.s"
 	@echo "... src/demo.o"
 	@echo "... src/demo.i"
 	@echo "... src/demo.s"

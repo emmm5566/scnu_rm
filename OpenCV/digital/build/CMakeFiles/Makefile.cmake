@@ -57,4 +57,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/gray.dir/DependInfo.cmake"
   "CMakeFiles/binary.dir/DependInfo.cmake"
   "CMakeFiles/morphology.dir/DependInfo.cmake"
+  "CMakeFiles/contours.dir/DependInfo.cmake"
+  "CMakeFiles/RotatedRect.dir/DependInfo.cmake"
+  "CMakeFiles/approxPolyDP.dir/DependInfo.cmake"
+  "CMakeFiles/API.dir/DependInfo.cmake"
   )
