@@ -95,3 +95,42 @@ int main()
 
     return 0;
 }
+
+
+
+
+
+// cv::contourArea —— 计算轮廓面积
+// double contourArea(
+//     InputArray contour,  // 输入轮廓（std::vector<cv::Point> 类型）
+//     bool oriented = false  // 是否返回有方向的面积（默认false，返回绝对值）
+// );
+
+// cv::arcLength —— 计算轮廓周长（弧长）
+// double arcLength(
+//     InputArray curve,  // 输入曲线/轮廓（std::vector<cv::Point> 类型）
+//     bool closed        // 曲线是否闭合（轮廓通常为true）
+// );
+
+// cv::approxPolyDP —— 轮廓多边形逼近
+// void approxPolyDP(
+//     InputArray curve,        // 输入轮廓（原始曲线）
+//     OutputArray approxCurve, // 输出的近似多边形（顶点更少）
+//     double epsilon,          // 逼近精度（原始轮廓与近似多边形的最大距离，单位：像素）
+//     bool closed              // 是否闭合（通常为true）
+// );
+// epsilon：核心参数，决定近似精度。值越小，近似越接近原始轮廓（顶点多）；值越大，轮廓越简化（顶点少）。
+// 实际中常用 epsilon = 0.02 * arcLength(curve, true)（周长的 2%），平衡精度和简化程度
+
+// cv::drawContours —— 绘制轮廓
+// void drawContours(
+//     InputOutputArray image,  // 目标图像（绘制到该图像上）
+//     InputArrayOfArrays contours,  // 轮廓集合（std::vector<std::vector<cv::Point>>）
+//     int contourIdx,          // 要绘制的轮廓索引（-1表示绘制所有轮廓）
+//     const Scalar& color,     // 轮廓颜色（如cv::Scalar(0,255,0)表示绿色）
+//     int thickness = 1,       // 轮廓线宽（-1表示填充轮廓内部）
+//     int lineType = cv::LINE_8,  // 线类型（默认即可）
+//     InputArray hierarchy = noArray(),  // 轮廓层级（通常无需传入）
+//     int maxLevel = INT_MAX,   // 绘制的最大层级（默认绘制所有层级）
+//     Point offset = Point()    // 轮廓偏移量（默认无偏移）
+// );

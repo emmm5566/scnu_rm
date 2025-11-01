@@ -79,6 +79,7 @@ std::vector<cv::Point> getContours(cv::Mat mask)
     std::vector< std::vector<cv::Point> > conPoly(contours.size()); 
     std::vector<cv::Rect> boundRect(contours.size()); 
 
+    //最大矩形 - 检测目标纸张 
     std::vector<cv::Point> biggest;
     int maxArea = 0;
 
@@ -140,6 +141,7 @@ std::vector<cv::Point> reorder(std::vector<cv::Point> points)
     newPoints.push_back(points[ max_element(subPoints.begin(), subPoints.end()) - subPoints.begin() ]); //1
     newPoints.push_back(points[ min_element(subPoints.begin(), subPoints.end()) - subPoints.begin() ]); //2
     newPoints.push_back(points[ max_element(sumPoints.begin(), sumPoints.end()) - sumPoints.begin() ]); //3
+    //min_element/max_element返回容器中最小/大值元素的迭代器，去容器的起始迭代器sumPoints.begin()/subPoints.begin()，得到的最小/大值的索引
 
     return newPoints;
 }
@@ -158,3 +160,16 @@ cv::Mat getWarp(cv::Mat img, std::vector<cv::Point> points, float w, float h)
 
     return imgWarp;
 }
+
+
+
+
+
+// min_element 在容器（如 vector）的指定范围内查找最小值元素，并返回指向该元素的迭代器（iterator）
+//
+// #include <algorithm>
+// template <class ForwardIterator>
+// ForwardIterator min_element(ForwardIterator first, ForwardIterator last);
+//
+// 参数：first（范围起始迭代器）、last（范围结束迭代器，不包含在范围内），即查找范围为 [first, last)。
+// 返回值：指向范围内第一个最小值元素的迭代器（若有多个相同的最小值，返回第一个出现的位置）

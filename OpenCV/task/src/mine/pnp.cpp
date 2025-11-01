@@ -62,3 +62,32 @@ int main()
     
     return 0;
 }
+
+
+
+
+
+// bool solvePnP(
+//     InputArray objectPoints,   // 3D世界点集合（vector<Point3f>）
+//     InputArray imagePoints,    // 对应的2D图像点集合（vector<Point2f>）
+//     InputArray cameraMatrix,   // 相机内参矩阵（标定得到）
+//     InputArray distCoeffs,     // 相机畸变系数（标定得到，无畸变时可传Mat::zeros）
+//     OutputArray rvec,          // 输出旋转向量（Rodrigues向量，可转换为旋转矩阵）
+//     OutputArray tvec,          // 输出平移向量（相机坐标系下物体的位置）
+//     bool useExtrinsicGuess = false,  // 是否使用外部位姿初值（一般为false）
+//     int flags = SOLVEPNP_ITERATIVE   // 求解方法（如迭代法、P3P法等）
+// );
+//
+// cameraMatrix：相机内参矩阵，通过cv::calibrateCamera标定得到(fx/fy是焦距，cx/cy是图像中心) 
+// cv::Mat_<double>(3,3)
+// [fx,  0,  cx;
+//  0,  fy, cy;
+//  0,   0,  1]
+// cv::Mat camera_matrix = (cv::Mat_<double>(3,3) << fx, 0, cx, 0, fy, cy, 0, 0, 1); 
+//
+// distCoeffs：相机畸变系数，标定后得到（如[k1, k2, p1, p2, k3]）
+// cv::Mat distort_coeffs = (cv::Mat_<double>(1,5) << k1, k2, p1, p2, k3);
+//
+// flags：
+// SOLVEPNP_ITERATIVE：迭代法（鲁棒性强，需至少 4 个点）
+// SOLVEPNP_P3P：P3P 法（仅需 3 个点，对噪声敏感）

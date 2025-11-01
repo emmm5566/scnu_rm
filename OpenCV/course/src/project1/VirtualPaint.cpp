@@ -4,14 +4,16 @@
 
 // HSV颜色阈值：{HueMin, HueMax, SaturationMin, SaturationMax, ValueMin, ValueMax}
 std::vector< std::vector<int> > myColors {
+    {144,179,106,255,71,255}, //red
     {124,48,117,143,170,255}, //Purple
     {68,72,156,102,126,255} //Green 
 };
 
 // 对应颜色的BGR值（用于绘制）
 std::vector<cv::Scalar> myColorValues{ 
-    {255,0,255}, //Purple
-    {0,255,0} //Green
+    {0, 0, 255}, //red
+    {255, 0, 255}, //Purple
+    {0, 255, 0} //Green
 };
 
 cv::Point myPoint(0, 0);
@@ -121,8 +123,8 @@ cv::Point getContours(cv::Mat mask, cv::Mat img)
             //points.push_back({myPoint.x, myPoint.y, colorIdx});
 
             // 绘制轮廓和矩形
-            cv::drawContours(img, conPoly, i, cv::Scalar(255,0,255), 2);
-            rectangle(img, boundRect[i].tl(), boundRect[i].br(), cv::Scalar(0, 255, 0), 2);
+            //cv::drawContours(img, conPoly, i, cv::Scalar(255,0,255), 2);
+            //rectangle(img, boundRect[i].tl(), boundRect[i].br(), cv::Scalar(0, 255, 0), 2);
         }
     }
 
