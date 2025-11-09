@@ -1,0 +1,348 @@
+[0.066s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.066s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=12, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f07789334f0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f0778932fe0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f0778932fe0>>)
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.158s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.158s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws'
+[0.158s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.159s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.166s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ignore'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ignore_ament_install'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['colcon_pkg']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'colcon_pkg'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['colcon_meta']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'colcon_meta'
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extensions ['ros']
+[0.167s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_interfaces) by extension 'ros'
+[0.168s] DEBUG:colcon.colcon_core.package_identification:Package 'src/custom_interfaces' with type 'ros.ament_cmake' and name 'custom_interfaces'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msg_nodes) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msg_nodes) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msg_nodes) by extension 'ignore_ament_install'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msg_nodes) by extensions ['colcon_pkg']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msg_nodes) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msg_nodes) by extensions ['colcon_meta']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msg_nodes) by extension 'colcon_meta'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msg_nodes) by extensions ['ros']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/custom_msg_nodes) by extension 'ros'
+[0.169s] DEBUG:colcon.colcon_core.package_identification:Package 'src/custom_msg_nodes' with type 'ros.ament_cmake' and name 'custom_msg_nodes'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/demo_turtlesim) by extensions ['ignore', 'ignore_ament_install']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/demo_turtlesim) by extension 'ignore'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/demo_turtlesim) by extension 'ignore_ament_install'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/demo_turtlesim) by extensions ['colcon_pkg']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/demo_turtlesim) by extension 'colcon_pkg'
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/demo_turtlesim) by extensions ['colcon_meta']
+[0.169s] Level 1:colcon.colcon_core.package_identification:_identify(src/demo_turtlesim) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/demo_turtlesim) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/demo_turtlesim) by extension 'ros'
+[0.170s] DEBUG:colcon.colcon_core.package_identification:Package 'src/demo_turtlesim' with type 'ros.ament_cmake' and name 'demo_turtlesim'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_topic) by extensions ['ignore', 'ignore_ament_install']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_topic) by extension 'ignore'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_topic) by extension 'ignore_ament_install'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_topic) by extensions ['colcon_pkg']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_topic) by extension 'colcon_pkg'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_topic) by extensions ['colcon_meta']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_topic) by extension 'colcon_meta'
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_topic) by extensions ['ros']
+[0.170s] Level 1:colcon.colcon_core.package_identification:_identify(src/example_topic) by extension 'ros'
+[0.171s] DEBUG:colcon.colcon_core.package_identification:Package 'src/example_topic' with type 'ros.ament_cmake' and name 'example_topic'
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.171s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.183s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.185s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[0.192s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_args' from command line to 'None'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'custom_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.213s] DEBUG:colcon.colcon_core.verb:Building package 'custom_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces', 'merge_install': False, 'path': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/custom_interfaces', 'symlink_install': False, 'test_result_base': None}
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'demo_turtlesim' build argument 'cmake_args' from command line to 'None'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'demo_turtlesim' build argument 'cmake_target' from command line to 'None'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'demo_turtlesim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'demo_turtlesim' build argument 'cmake_clean_cache' from command line to 'False'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'demo_turtlesim' build argument 'cmake_clean_first' from command line to 'False'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'demo_turtlesim' build argument 'cmake_force_configure' from command line to 'False'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'demo_turtlesim' build argument 'ament_cmake_args' from command line to 'None'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'demo_turtlesim' build argument 'catkin_cmake_args' from command line to 'None'
+[0.213s] Level 5:colcon.colcon_core.verb:set package 'demo_turtlesim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.213s] DEBUG:colcon.colcon_core.verb:Building package 'demo_turtlesim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim', 'merge_install': False, 'path': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/demo_turtlesim', 'symlink_install': False, 'test_result_base': None}
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'example_topic' build argument 'cmake_args' from command line to 'None'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'example_topic' build argument 'cmake_target' from command line to 'None'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'example_topic' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'example_topic' build argument 'cmake_clean_cache' from command line to 'False'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'example_topic' build argument 'cmake_clean_first' from command line to 'False'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'example_topic' build argument 'cmake_force_configure' from command line to 'False'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'example_topic' build argument 'ament_cmake_args' from command line to 'None'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'example_topic' build argument 'catkin_cmake_args' from command line to 'None'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'example_topic' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.214s] DEBUG:colcon.colcon_core.verb:Building package 'example_topic' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic', 'merge_install': False, 'path': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/example_topic', 'symlink_install': False, 'test_result_base': None}
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'custom_msg_nodes' build argument 'cmake_args' from command line to 'None'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'custom_msg_nodes' build argument 'cmake_target' from command line to 'None'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'custom_msg_nodes' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'custom_msg_nodes' build argument 'cmake_clean_cache' from command line to 'False'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'custom_msg_nodes' build argument 'cmake_clean_first' from command line to 'False'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'custom_msg_nodes' build argument 'cmake_force_configure' from command line to 'False'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'custom_msg_nodes' build argument 'ament_cmake_args' from command line to 'None'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'custom_msg_nodes' build argument 'catkin_cmake_args' from command line to 'None'
+[0.214s] Level 5:colcon.colcon_core.verb:set package 'custom_msg_nodes' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.214s] DEBUG:colcon.colcon_core.verb:Building package 'custom_msg_nodes' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes', 'merge_install': False, 'path': '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/custom_msg_nodes', 'symlink_install': False, 'test_result_base': None}
+[0.214s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.215s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.215s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/custom_interfaces' with build type 'ament_cmake'
+[0.215s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/custom_interfaces'
+[0.217s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.217s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.217s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.219s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/demo_turtlesim' with build type 'ament_cmake'
+[0.219s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/demo_turtlesim'
+[0.219s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.219s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.220s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/example_topic' with build type 'ament_cmake'
+[0.220s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/example_topic'
+[0.221s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.221s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.225s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/custom_interfaces -DCMAKE_INSTALL_PREFIX=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces
+[0.228s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/demo_turtlesim -DCMAKE_INSTALL_PREFIX=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim
+[0.231s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/example_topic -DCMAKE_INSTALL_PREFIX=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic
+[1.246s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/example_topic -DCMAKE_INSTALL_PREFIX=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic
+[1.248s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic -- -j12 -l12
+[1.328s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/demo_turtlesim -DCMAKE_INSTALL_PREFIX=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim
+[1.330s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim -- -j12 -l12
+[1.609s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/custom_interfaces -DCMAKE_INSTALL_PREFIX=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces
+[1.611s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces -- -j12 -l12
+[3.990s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces -- -j12 -l12
+[4.002s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces
+[4.081s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces)
+[4.082s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_interfaces
+[4.084s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces' for CMake module files
+[4.085s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces' for CMake config files
+[4.086s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'cmake_prefix_path')
+[4.086s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.ps1'
+[4.087s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.dsv'
+[4.088s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.sh'
+[4.089s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib'
+[4.089s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'ld_library_path_lib')
+[4.089s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.ps1'
+[4.090s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.dsv'
+[4.090s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.sh'
+[4.091s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/bin'
+[4.091s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib/pkgconfig/custom_interfaces.pc'
+[4.091s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib/python3.10/site-packages'
+[4.091s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/bin'
+[4.092s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/package.ps1'
+[4.093s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/package.dsv'
+[4.093s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/package.sh'
+[4.094s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/package.bash'
+[4.095s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/package.zsh'
+[4.096s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/colcon-core/packages/custom_interfaces)
+[4.097s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_interfaces)
+[4.097s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces' for CMake module files
+[4.098s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces' for CMake config files
+[4.099s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'cmake_prefix_path')
+[4.099s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.ps1'
+[4.100s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.dsv'
+[4.100s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/cmake_prefix_path.sh'
+[4.101s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib'
+[4.101s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_interfaces', 'ld_library_path_lib')
+[4.101s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.ps1'
+[4.102s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.dsv'
+[4.102s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/hook/ld_library_path_lib.sh'
+[4.103s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/bin'
+[4.103s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib/pkgconfig/custom_interfaces.pc'
+[4.103s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib/python3.10/site-packages'
+[4.103s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/bin'
+[4.104s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/package.ps1'
+[4.104s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/package.dsv'
+[4.106s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/package.sh'
+[4.107s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/package.bash'
+[4.108s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/custom_interfaces/package.zsh'
+[4.108s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/share/colcon-core/packages/custom_interfaces)
+[4.108s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/custom_msg_nodes' with build type 'ament_cmake'
+[4.109s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/custom_msg_nodes'
+[4.109s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[4.109s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[4.120s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes': AMENT_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/custom_msg_nodes -DCMAKE_INSTALL_PREFIX=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes
+[5.404s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes' returned '0': AMENT_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/custom_msg_nodes -DCMAKE_INSTALL_PREFIX=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes
+[5.405s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes': AMENT_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes -- -j12 -l12
+[8.113s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim -- -j12 -l12
+[8.115s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim
+[8.133s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(demo_turtlesim)
+[8.133s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim' for CMake module files
+[8.134s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/demo_turtlesim
+[8.134s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim' for CMake config files
+[8.135s] Level 1:colcon.colcon_core.shell:create_environment_hook('demo_turtlesim', 'cmake_prefix_path')
+[8.135s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/hook/cmake_prefix_path.ps1'
+[8.135s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/hook/cmake_prefix_path.dsv'
+[8.136s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/hook/cmake_prefix_path.sh'
+[8.136s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/lib'
+[8.136s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/bin'
+[8.136s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/lib/pkgconfig/demo_turtlesim.pc'
+[8.136s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/lib/python3.10/site-packages'
+[8.137s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/bin'
+[8.137s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/package.ps1'
+[8.137s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/package.dsv'
+[8.137s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/package.sh'
+[8.138s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/package.bash'
+[8.138s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/package.zsh'
+[8.138s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/colcon-core/packages/demo_turtlesim)
+[8.138s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(demo_turtlesim)
+[8.138s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim' for CMake module files
+[8.139s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim' for CMake config files
+[8.139s] Level 1:colcon.colcon_core.shell:create_environment_hook('demo_turtlesim', 'cmake_prefix_path')
+[8.139s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/hook/cmake_prefix_path.ps1'
+[8.139s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/hook/cmake_prefix_path.dsv'
+[8.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/hook/cmake_prefix_path.sh'
+[8.140s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/lib'
+[8.140s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/bin'
+[8.140s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/lib/pkgconfig/demo_turtlesim.pc'
+[8.140s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/lib/python3.10/site-packages'
+[8.140s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/bin'
+[8.141s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/package.ps1'
+[8.141s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/package.dsv'
+[8.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/package.sh'
+[8.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/package.bash'
+[8.142s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/demo_turtlesim/package.zsh'
+[8.142s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/demo_turtlesim/share/colcon-core/packages/demo_turtlesim)
+[9.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic -- -j12 -l12
+[9.430s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic
+[9.440s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(example_topic)
+[9.441s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic
+[9.441s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic' for CMake module files
+[9.442s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic' for CMake config files
+[9.443s] Level 1:colcon.colcon_core.shell:create_environment_hook('example_topic', 'cmake_prefix_path')
+[9.443s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/hook/cmake_prefix_path.ps1'
+[9.444s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/hook/cmake_prefix_path.dsv'
+[9.444s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/hook/cmake_prefix_path.sh'
+[9.444s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/lib'
+[9.444s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/bin'
+[9.444s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/lib/pkgconfig/example_topic.pc'
+[9.445s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/lib/python3.10/site-packages'
+[9.445s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/bin'
+[9.445s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/package.ps1'
+[9.445s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/package.dsv'
+[9.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/package.sh'
+[9.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/package.bash'
+[9.446s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/package.zsh'
+[9.446s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/colcon-core/packages/example_topic)
+[9.446s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(example_topic)
+[9.447s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic' for CMake module files
+[9.447s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic' for CMake config files
+[9.447s] Level 1:colcon.colcon_core.shell:create_environment_hook('example_topic', 'cmake_prefix_path')
+[9.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/hook/cmake_prefix_path.ps1'
+[9.447s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/hook/cmake_prefix_path.dsv'
+[9.448s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/hook/cmake_prefix_path.sh'
+[9.448s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/lib'
+[9.448s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/bin'
+[9.448s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/lib/pkgconfig/example_topic.pc'
+[9.448s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/lib/python3.10/site-packages'
+[9.448s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/bin'
+[9.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/package.ps1'
+[9.449s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/package.dsv'
+[9.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/package.sh'
+[9.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/package.bash'
+[9.449s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/example_topic/package.zsh'
+[9.450s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/example_topic/share/colcon-core/packages/example_topic)
+[12.046s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes' returned '0': AMENT_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes -- -j12 -l12
+[12.048s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes': AMENT_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes
+[12.067s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_msg_nodes)
+[12.067s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes' for CMake module files
+[12.068s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes' returned '0': AMENT_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/custom_msg_nodes
+[12.068s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes' for CMake config files
+[12.069s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msg_nodes', 'cmake_prefix_path')
+[12.069s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/hook/cmake_prefix_path.ps1'
+[12.070s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/hook/cmake_prefix_path.dsv'
+[12.071s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/hook/cmake_prefix_path.sh'
+[12.072s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/lib'
+[12.073s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/bin'
+[12.073s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/lib/pkgconfig/custom_msg_nodes.pc'
+[12.073s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/lib/python3.10/site-packages'
+[12.074s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/bin'
+[12.074s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/package.ps1'
+[12.075s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/package.dsv'
+[12.075s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/package.sh'
+[12.075s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/package.bash'
+[12.076s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/package.zsh'
+[12.076s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/colcon-core/packages/custom_msg_nodes)
+[12.077s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(custom_msg_nodes)
+[12.077s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes' for CMake module files
+[12.077s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes' for CMake config files
+[12.077s] Level 1:colcon.colcon_core.shell:create_environment_hook('custom_msg_nodes', 'cmake_prefix_path')
+[12.077s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/hook/cmake_prefix_path.ps1'
+[12.078s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/hook/cmake_prefix_path.dsv'
+[12.078s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/hook/cmake_prefix_path.sh'
+[12.078s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/lib'
+[12.078s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/bin'
+[12.079s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/lib/pkgconfig/custom_msg_nodes.pc'
+[12.079s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/lib/python3.10/site-packages'
+[12.079s] Level 1:colcon.colcon_core.environment:checking '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/bin'
+[12.079s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/package.ps1'
+[12.080s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/package.dsv'
+[12.080s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/package.sh'
+[12.080s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/package.bash'
+[12.080s] INFO:colcon.colcon_core.shell:Creating package script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/custom_msg_nodes/package.zsh'
+[12.081s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/custom_msg_nodes/share/colcon-core/packages/custom_msg_nodes)
+[12.081s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[12.081s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[12.081s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[12.081s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[12.088s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[12.088s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[12.088s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[12.100s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[12.100s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/local_setup.ps1'
+[12.101s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/_local_setup_util_ps1.py'
+[12.101s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/setup.ps1'
+[12.102s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/local_setup.sh'
+[12.103s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/_local_setup_util_sh.py'
+[12.103s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/setup.sh'
+[12.104s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/local_setup.bash'
+[12.104s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/setup.bash'
+[12.105s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/local_setup.zsh'
+[12.105s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/install/setup.zsh'

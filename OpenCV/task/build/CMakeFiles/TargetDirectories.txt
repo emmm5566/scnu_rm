@@ -1,9 +1,12 @@
+/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/t.dir
+/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/tt.dir
 /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/test.dir
 /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/temp.dir
 /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/main.dir
 /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/task.dir
 /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/pnp.dir
 /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/solvepnp.dir
+/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/solvePnP.dir
 /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/armor_pose_estimation.dir
 /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/color_detection.dir
 /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles/edge_contour_detection.dir

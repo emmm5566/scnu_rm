@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-95e4ecae5bca71023e24.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "example_topic",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "example_topic_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-example_topic_uninstall-94d9b3697212d72a3816.json",
+					"name" : "example_topic_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "topic_publisher::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-topic_publisher-d092bbd9a642835b2ca0.json",
+					"name" : "topic_publisher",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "topic_subscribe::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-topic_subscribe-3a12a84b2fa045a01e48.json",
+					"name" : "topic_subscribe",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-8cee5dccb675b90f9e94.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/build/example_topic",
+		"source" : "/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter3/topic_ws/src/example_topic"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

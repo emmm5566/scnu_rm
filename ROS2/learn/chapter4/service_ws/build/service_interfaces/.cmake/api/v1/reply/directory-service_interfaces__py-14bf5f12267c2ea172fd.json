@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "service_interfaces__py",
+		"source" : "/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/build/service_interfaces/service_interfaces__py"
+	}
+}

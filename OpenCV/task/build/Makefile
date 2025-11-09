@@ -117,6 +117,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named t
+
+# Build rule for target.
+t : cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 t
+.PHONY : t
+
+# fast build rule for target.
+t/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/build
+.PHONY : t/fast
+
+#=============================================================================
+# Target rules for targets named tt
+
+# Build rule for target.
+tt: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tt
+.PHONY : tt
+
+# fast build rule for target.
+tt/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/build
+.PHONY : tt/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -193,6 +219,19 @@ solvepnp: cmake_check_build_system
 solvepnp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solvepnp.dir/build.make CMakeFiles/solvepnp.dir/build
 .PHONY : solvepnp/fast
+
+#=============================================================================
+# Target rules for targets named solvePnP
+
+# Build rule for target.
+solvePnP: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 solvePnP
+.PHONY : solvePnP
+
+# fast build rule for target.
+solvePnP/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solvePnP.dir/build.make CMakeFiles/solvePnP.dir/build
+.PHONY : solvePnP/fast
 
 #=============================================================================
 # Target rules for targets named armor_pose_estimation
@@ -390,6 +429,30 @@ src/mine/pnp.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pnp.dir/build.make CMakeFiles/pnp.dir/src/mine/pnp.cpp.s
 .PHONY : src/mine/pnp.cpp.s
 
+src/mine/solvePnP.o: src/mine/solvePnP.cpp.o
+.PHONY : src/mine/solvePnP.o
+
+# target to build an object file
+src/mine/solvePnP.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solvePnP.dir/build.make CMakeFiles/solvePnP.dir/src/mine/solvePnP.cpp.o
+.PHONY : src/mine/solvePnP.cpp.o
+
+src/mine/solvePnP.i: src/mine/solvePnP.cpp.i
+.PHONY : src/mine/solvePnP.i
+
+# target to preprocess a source file
+src/mine/solvePnP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solvePnP.dir/build.make CMakeFiles/solvePnP.dir/src/mine/solvePnP.cpp.i
+.PHONY : src/mine/solvePnP.cpp.i
+
+src/mine/solvePnP.s: src/mine/solvePnP.cpp.s
+.PHONY : src/mine/solvePnP.s
+
+# target to generate assembly for a file
+src/mine/solvePnP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/solvePnP.dir/build.make CMakeFiles/solvePnP.dir/src/mine/solvePnP.cpp.s
+.PHONY : src/mine/solvePnP.cpp.s
+
 src/mine/solvepnp.o: src/mine/solvepnp.cpp.o
 .PHONY : src/mine/solvepnp.o
 
@@ -486,6 +549,54 @@ src/mine/test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/mine/test.cpp.s
 .PHONY : src/mine/test.cpp.s
 
+src/t.o: src/t.cpp.o
+.PHONY : src/t.o
+
+# target to build an object file
+src/t.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/src/t.cpp.o
+.PHONY : src/t.cpp.o
+
+src/t.i: src/t.cpp.i
+.PHONY : src/t.i
+
+# target to preprocess a source file
+src/t.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/src/t.cpp.i
+.PHONY : src/t.cpp.i
+
+src/t.s: src/t.cpp.s
+.PHONY : src/t.s
+
+# target to generate assembly for a file
+src/t.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/src/t.cpp.s
+.PHONY : src/t.cpp.s
+
+src/tt.o: src/tt.cpp.o
+.PHONY : src/tt.o
+
+# target to build an object file
+src/tt.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/src/tt.cpp.o
+.PHONY : src/tt.cpp.o
+
+src/tt.i: src/tt.cpp.i
+.PHONY : src/tt.i
+
+# target to preprocess a source file
+src/tt.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/src/tt.cpp.i
+.PHONY : src/tt.cpp.i
+
+src/tt.s: src/tt.cpp.s
+.PHONY : src/tt.s
+
+# target to generate assembly for a file
+src/tt.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/src/tt.cpp.s
+.PHONY : src/tt.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -500,10 +611,13 @@ help:
 	@echo "... edge_contour_detection"
 	@echo "... main"
 	@echo "... pnp"
+	@echo "... solvePnP"
 	@echo "... solvepnp"
+	@echo "... t"
 	@echo "... task"
 	@echo "... temp"
 	@echo "... test"
+	@echo "... tt"
 	@echo "... src/TJ-SuperPower/armor_detect.o"
 	@echo "... src/TJ-SuperPower/armor_detect.i"
 	@echo "... src/TJ-SuperPower/armor_detect.s"
@@ -522,6 +636,9 @@ help:
 	@echo "... src/mine/pnp.o"
 	@echo "... src/mine/pnp.i"
 	@echo "... src/mine/pnp.s"
+	@echo "... src/mine/solvePnP.o"
+	@echo "... src/mine/solvePnP.i"
+	@echo "... src/mine/solvePnP.s"
 	@echo "... src/mine/solvepnp.o"
 	@echo "... src/mine/solvepnp.i"
 	@echo "... src/mine/solvepnp.s"
@@ -534,6 +651,12 @@ help:
 	@echo "... src/mine/test.o"
 	@echo "... src/mine/test.i"
 	@echo "... src/mine/test.s"
+	@echo "... src/t.o"
+	@echo "... src/t.i"
+	@echo "... src/t.s"
+	@echo "... src/tt.o"
+	@echo "... src/tt.i"
+	@echo "... src/tt.s"
 .PHONY : help
 
 

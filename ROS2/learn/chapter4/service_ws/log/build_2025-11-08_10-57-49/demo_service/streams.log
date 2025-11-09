@@ -1,0 +1,23 @@
+[0.008s] Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/build/demo_service': CMAKE_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/service_interfaces:/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service:/opt/ros/humble /usr/bin/cmake --build /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/build/demo_service -- -j12 -l12
+[0.062s] [35m[1mConsolidate compiler generated dependencies of target turtle_control[0m
+[0.087s] [100%] Built target turtle_control
+[0.102s] Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/build/demo_service' returned '0': CMAKE_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/service_interfaces:/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service:/opt/ros/humble /usr/bin/cmake --build /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/build/demo_service -- -j12 -l12
+[0.104s] Invoking command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/build/demo_service': CMAKE_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/service_interfaces:/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service:/opt/ros/humble /usr/bin/cmake --install /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/build/demo_service
+[0.112s] -- Install configuration: ""
+[0.112s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/lib/demo_service/turtle_control
+[0.112s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/ament_index/resource_index/package_run_dependencies/demo_service
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/ament_index/resource_index/parent_prefix_path/demo_service
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/environment/ament_prefix_path.sh
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/environment/ament_prefix_path.dsv
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/environment/path.sh
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/environment/path.dsv
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/local_setup.bash
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/local_setup.sh
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/local_setup.zsh
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/local_setup.dsv
+[0.113s] -- Installing: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/package.dsv
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/ament_index/resource_index/packages/demo_service
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/cmake/demo_serviceConfig.cmake
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/cmake/demo_serviceConfig-version.cmake
+[0.113s] -- Up-to-date: /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service/share/demo_service/package.xml
+[0.114s] Invoked command in '/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/build/demo_service' returned '0': CMAKE_PREFIX_PATH=/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/service_interfaces:/home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/install/demo_service:/opt/ros/humble /usr/bin/cmake --install /home/emmm/Desktop/scnu_rm/ROS2/learn/chapter4/service_ws/build/demo_service

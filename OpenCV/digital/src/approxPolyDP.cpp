@@ -208,6 +208,25 @@ void drawapp(cv::Mat result, cv::Mat img)
 
 
 
+// // 最大外接矩形（boundingRect）：通过 x/y/width/height 手动推导 4 个顶点；
+// std::vector<cv::Point> contour; // 输入：轮廓（或点集）
+// cv::Rect rect = cv::boundingRect(contour); // 求最大外接矩形
+// std::vector<cv::Point2f> boundRectPoints; // 计算4个顶点坐标
+// boundRectPoints.push_back(cv::Point2f(rect.x, rect.y)); // 左上 (x, y)
+// boundRectPoints.push_back(cv::Point2f(rect.x + rect.width, rect.y)); // 右上 (x+w, y)
+// boundRectPoints.push_back(cv::Point2f(rect.x + rect.width, rect.y + rect.height)); // 右下 (x+w, y+h)
+// boundRectPoints.push_back(cv::Point2f(rect.x, rect.y + rect.height)); // 左下 (x, y+h)
+
+// // 最小外接矩形（minAreaRect）：调用 points() 方法自动获取 4 个顶点
+// std::vector<cv::Point> contour; // 输入：轮廓（或点集）
+// cv::RotatedRect minRect = cv::minAreaRect(contour); // 求最小外接矩形
+// cv::Point2f minRectPoints[4]; // 直接获取4个顶点坐标（顺序：默认按矩形周长排列，需注意一致性）
+// minRect.points(minRectPoints); // 自动填充4个顶点到数组
+// std::vector<cv::Point2f> minAreaRectPoints; // 转换为vector方便后续处理
+// minAreaRectPoints.assign(minRectPoints, minRectPoints + 4);
+
+
+
 // cv::GaussianBlur（高斯滤波函数）
 // void cv::GaussianBlur(
 //     cv::InputArray src,        // 输入图像（待滤波图像，支持多通道）

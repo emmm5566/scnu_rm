@@ -1,4 +1,6 @@
 #include <opencv2/opencv.hpp>
+#include <vector>
+#include <algorithm>
 
 //灯条
 struct lightBar
@@ -25,22 +27,24 @@ void lightBarPoints(lightBar & bar)
 }
 
 
+
 int main()
 {
     //相机内参
     cv::Mat cameraMatrix = (cv::Mat_<double>(3,3) <<
-        1200, 0, 640, //fx, 0, cx
-        0, 1200, 360, //0, fy, cy
+        2422.61547, 0, 706.68406, //fx, 0, cx
+        0, 2420.80771, 564.29241, //0, fy, cy
         0, 0, 1 //0, 0, 1
     );
 
     //畸变系数
-    cv::Mat distCoeffs = cv::Mat::zeros(5, 1, CV_64F);
+    cv::Mat distCoeffs = (cv::Mat_<double>(5,1) << 
+        -0.018647, 0.084359, -0.000925, 0.000312, 0.000000);
 
     //装甲板坐标（装甲板中心为原点，与imagePoints对应）
     //cv::Point3f - float，2.0会被隐式转换成double
-    float LIGHTBAR_LENGTH = 500.0f; // 灯条长度（mm）
-    float ARMOR_WIDTH = 200.0f; //装甲板宽度（mm）
+    float LIGHTBAR_LENGTH = 5.6f; // 灯条长度（mm）
+    float ARMOR_WIDTH = 13.5f; //装甲板宽度（mm）
     std::vector<cv::Point3f> objectPoints
     {
         {-ARMOR_WIDTH / 2.0f, -LIGHTBAR_LENGTH / 2.0f, 0}, //左上（x，y，z）
@@ -72,9 +76,9 @@ int main()
         int Threshold = 220;
         int MaxVal = 255;
         cv::Size GaussianBlurKernel = cv::Size(5,5);
-        cv::split(frame, channels);
-        cv::threshold(channels[2], binary, Threshold, MaxVal, 0);
-        cv::GaussianBlur(binary, Gaussian, GaussianBlurKernel, 0);
+        cv::split(frame, channels); //分离通道
+        cv::threshold(channels[2], binary, Threshold, MaxVal, 0); //二值化
+        cv::GaussianBlur(binary, Gaussian, GaussianBlurKernel, 0); //高斯模糊
 
         //轮廓检测
         std::vector< std::vector <cv::Point> > contours;
@@ -86,7 +90,7 @@ int main()
         for(size_t i=0; i<contours.size(); i++)
         {
             double area = contourArea(contours[i]);
-            if(area < 50.0) continue;
+            if(area < 50.0) continue; //面积过滤
 
             //最小外接矩形
             cv::RotatedRect minRect = cv::minAreaRect(contours[i]);
@@ -102,7 +106,7 @@ int main()
                 lightBar bar;
                 bar.rect = minRect;
                 bar.center = minRect.center;
-                lightBarPoints(bar);
+                lightBarPoints(bar); //计算灯条长轴端点
                 lightBars.push_back(bar);
 
                 //绘制最小外接矩形
@@ -125,17 +129,17 @@ int main()
             std::vector<cv::Point2f> allVertices;
             // 左灯条的4个顶点
             cv::Point2f leftVertices[4];
-            bar1.rect.points(leftVertices);
-            allVertices.insert(allVertices.end(), leftVertices, leftVertices+4);
+            bar1.rect.points(leftVertices); // 用旋转矩形的points()方法获取4个顶点
+            allVertices.insert(allVertices.end(), leftVertices, leftVertices+4); // 向allVertices的末尾插入leftVertices中的4个元素
             // 右灯条的4个顶点
             cv::Point2f rightVertices[4];
             bar2.rect.points(rightVertices);
             allVertices.insert(allVertices.end(), rightVertices, rightVertices+4);
 
             // 大矩形的最小/最大x、y
-            float minX = allVertices[0].x, maxX = allVertices[0].x;
-            float minY = allVertices[0].y, maxY = allVertices[0].y;
-            for(const auto& pt : allVertices)
+            float minX = allVertices[0].x, maxX = allVertices[0].x; //初始化
+            float minY = allVertices[0].y, maxY = allVertices[0].y; //初始化
+            for(const auto& pt : allVertices) //pt相当于allVertices[i]
             {
                 minX = std::min(minX, pt.x);
                 maxX = std::max(maxX, pt.x);
@@ -177,3 +181,20 @@ int main()
 
     return 0;
 }
+
+
+
+
+
+//rect.angle —— 旋转矩形的旋转角度
+// float
+// 旋转矩形相对于x 轴正方向的旋转角度，单位为度
+// 以矩形的宽边（较短边） 为基准，角度范围通常在 [-90°, 0°) 或 [0°, 90°)（具体取决于宽高的相对大小）。
+// 角度为正时，矩形逆时针旋转；角度为负时，顺时针旋转
+
+//std::vector::insert —— 在向量的指定位置插入元素
+// iterator insert(iterator position, const T& value); //插入单个元素
+// iterator insert(iterator position, size_t count, const T& value); //插入多个相同元素
+// template <class InputIt>
+// iterator insert(iterator position, InputIt first, InputIt last); //插入一个范围的元素
+// 将 [first, last) 范围内的所有元素插入到 position 位置
