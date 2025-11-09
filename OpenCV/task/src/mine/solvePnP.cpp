@@ -49,6 +49,7 @@ int main()
     //pnp解算
     pnp(img, armorPoints);
 
+    resize(img, img, {}, 2, 2);
     cv::imshow("Image", img);
     cv::imshow("ImagePre", imgPre);
     cv::waitKey(0);
@@ -104,6 +105,17 @@ std::vector<cv::Point2f> getArmor(std::vector<cv::RotatedRect> & lightBars)
     if(lightBars.size() < 2) 
         return {}; //返回一个空向量
 
+    // 获取两个灯条的中心
+    cv::Point2f center1 = lightBars[0].center;
+    cv::Point2f center2 = lightBars[1].center;
+    // 区分左右灯条（按x坐标）
+    cv::Point2f leftCenter = (center1.x < center2.x) ? center1 : center2;  // 左灯条中心
+    cv::Point2f rightCenter = (center1.x < center2.x) ? center2 : center1; // 右灯条中心
+    // 大矩形x范围 = 左灯条中心x 到 右灯条中心x（基于灯条中点）
+    //装甲板顶点（x坐标）
+    float minX = leftCenter.x;   // 左边界 = 左灯条中心x
+    float maxX = rightCenter.x;  // 右边界 = 右灯条中心x
+
     //收集所有顶点
     std::vector< cv::Point2f > allVertices;
     cv::Point2f pts[4];
@@ -118,16 +130,15 @@ std::vector<cv::Point2f> getArmor(std::vector<cv::RotatedRect> & lightBars)
         allVertices.push_back(pts[i]);
     }
 
-    //大矩形各顶点
-    float minX = allVertices[0].x, maxX = allVertices[0].x;
+    //装甲板顶点（y坐标）
     float minY = allVertices[0].y, maxY = allVertices[0].y;
     for(auto & allVertice : allVertices)
     {
-        minX = std::min(minX, allVertice.x);
-        maxX = std::max(maxX, allVertice.x);
         minY = std::min(minY, allVertice.y);
         maxY = std::max(maxY, allVertice.y);
     }
+
+    // 构建大矩形顶点（x基于灯条中心，y基于顶点范围）
     std::vector< cv::Point2f > rectVertices; 
     rectVertices.push_back(cv::Point2f(minX, minY));
     rectVertices.push_back(cv::Point2f(maxX, minY));
@@ -182,6 +193,7 @@ void pnp(cv::Mat & img, std::vector<cv::Point2f> & armorPoints)
     //计算欧拉角（YXZ顺序，单位：弧度→角度）
     cv::Mat rmat; //旋转矩阵
     cv::Rodrigues(rvec, rmat);
+    //INT_YXZ pitch=arctan2(m13,m33) roll=-arcsin(m33) yaw=arctan2(m21,m22)
     // 1. pitch（俯仰角，绕Y轴）：θ₁ = atan2(R[0][2], R[2][2])
     // double pitch = std::atan2(rmat.at<double>(0, 2), rmat.at<double>(2, 2)) * 180 / CV_PI;
     // 乘以180 / CV_PI将弧度转为角度
