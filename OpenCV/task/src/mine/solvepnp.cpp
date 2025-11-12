@@ -53,6 +53,12 @@ int main()
         {-ARMOR_WIDTH / 2.0f, LIGHTBAR_LENGTH / 2.0f, 0} //左下
     };
 
+
+    //滑块调整阈值
+    int Threshold = 255;
+    cv::namedWindow("Trackbars", (640, 200)); 
+    cv::createTrackbar("Threshold", "Trackbars", &Threshold, 255);
+
     //打开视频
     cv::VideoCapture cap("/home/emmm/Desktop/scnu_rm/OpenCV/task/img/task2_video.mp4");
     if(!cap.isOpened())
@@ -73,7 +79,6 @@ int main()
         //预处理
         cv::Mat channels[3];
         cv::Mat binary, Gaussian;
-        int Threshold = 220;
         int MaxVal = 255;
         cv::Size GaussianBlurKernel = cv::Size(5,5);
         cv::split(frame, channels); //分离通道
@@ -169,6 +174,7 @@ int main()
             std::cout << tvec.at<double>(0) << ", " << tvec.at<double>(1) << ", " << tvec.at<double>(2) << std::endl;
         }
 
+        cv::imshow("Gaussian", Gaussian);
         cv::imshow("Frame", frame);
         if(cv::waitKey(100) == 27)
         {

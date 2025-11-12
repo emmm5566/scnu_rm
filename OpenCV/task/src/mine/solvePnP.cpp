@@ -54,6 +54,8 @@ int main()
     cv::imshow("ImagePre", imgPre);
     cv::waitKey(0);
 
+    cv::destroyAllWindows();
+
     return 0;
 }
 
@@ -63,8 +65,16 @@ cv::Mat preProcessing(cv::Mat & img)
 {
     cv::Mat channels[3];
     cv::split(img, channels);
+
+    //滑动条没有绑定回调函数，且阈值变量是局部变量，拖动滑动条不会触发预处理逻辑重新执行，图像不会更新
+    //要实现动态调整阈值，需要调用回调函数
+    // int Threshold = 255;
+    // cv::namedWindow("Trackbars", (640, 200)); 
+    // cv::createTrackbar("Threshold", "Trackbars", &Threshold, 255);
+
+    int Threshold = 200;
     cv::Mat binary, Gaussian;
-    cv::threshold(channels[2], binary, 200, 255, 0);
+    cv::threshold(channels[2], binary, Threshold, 255, 0);
     cv::GaussianBlur(binary, Gaussian, cv::Size(5,5), 0);
 
     return Gaussian;
@@ -150,6 +160,13 @@ std::vector<cv::Point2f> getArmor(std::vector<cv::RotatedRect> & lightBars)
 
 void pnp(cv::Mat & img, std::vector<cv::Point2f> & armorPoints)
 {
+    // 确保装甲板顶点数为4（与世界点数量一致）
+    if(armorPoints.size() != 4)
+    {
+        std::cout << "Armor points size is not 4!" << std::endl;
+        return;
+    }
+
     //世界坐标系中三维点
     float LIGHTBAR_LENGTH = 0.056; //灯条长度m
     float ARMOR_WIDTH = 0.135; //装甲板宽度m
