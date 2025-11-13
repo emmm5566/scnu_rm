@@ -13,7 +13,11 @@ find_package(sensor_msgs REQUIRED)
 find_package(cv_bridge REQUIRED)
 find_package(image_transport REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS}) # Include OpenCV headers
-
+# rclcpp：ROS2 C++ 核心库
+# sensor_msgs：ROS2 图像消息类型（sensor_msgs/msg/Image）
+# cv_bridge：ROS 图像与 OpenCV 图像（cv::Mat）的转换工具
+# image_transport：ROS2 高效图像传输库（优化视频流传输）
+# OpenCV：OpenCV 开发库（已通过libopencv-dev安装）
 
 add_executable(my_opencv src/my_opencv.cpp)
 target_link_libraries(my_opencv ${OpenCV_LIBRARIES}) # Link OpenCV libraries
