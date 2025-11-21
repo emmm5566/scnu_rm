@@ -78,12 +78,6 @@ private:
 
             //识别装甲板
             if(lightBars.size() < 2) return;
-            //x坐标
-            cv::Point2f center1 = lightBars[0].center;
-            cv::Point2f center2 = lightBars[1].center;
-            cv::Point2f leftCenter = (center1.x < center2.x) ? center1 : center2;  
-            cv::Point2f rightCenter = (center1.x < center2.x) ? center2 : center1; 
-            float minX = leftCenter.x, maxX = rightCenter.x;
             //所有顶点
             std::vector<cv::Point2f> allVertices;
             cv::Point2f pts[4];
@@ -91,10 +85,13 @@ private:
             for (int i = 0; i < 4; i++) allVertices.push_back(pts[i]);
             lightBars[1].points(pts);
             for (int i = 0; i < 4; i++) allVertices.push_back(pts[i]);
-            //y坐标 
+            //x、y坐标 
+            float minX = allVertices[0].x, maxX = allVertices[0].x;
             float minY = allVertices[0].y, maxY = allVertices[0].y;
             for(auto & allVertice : allVertices)
             {
+                minX = std::min(minX, allVertice.x);
+                maxX = std::max(maxX, allVertice.x);
                 minY = std::min(minY, allVertice.y);
                 maxY = std::max(maxY, allVertice.y);
             }

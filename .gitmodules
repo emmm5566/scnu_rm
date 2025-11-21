@@ -1,0 +1,12 @@
+[submodule "livox_ros_driver2_humble"]
+	path = livox_ros_driver2_humble
+	url = https://gitee.com/SMBU-POLARBEAR/livox_ros_driver2_humble.git
+[submodule "livox_ros_driver2"]
+	path = livox_ros_driver2
+	url = https://github.com/Livox-SDK/livox_ros_driver2.git
+[submodule "ros2_hik_camera"]
+	path = ros2_hik_camera
+	url = https://github.com/FaterYU/ros2_hik_camera.git
+[submodule "Livox-SDK2"]
+	path = Livox-SDK2
+	url = https://github.com/Livox-SDK/Livox-SDK2.git
