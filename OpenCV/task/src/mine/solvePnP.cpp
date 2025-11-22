@@ -1,59 +1,52 @@
 #include <opencv2/opencv.hpp>
 #include <vector>
 
+struct TrackbarParams
+{
+    cv::Mat& image;
+    int* Threshold;
+};
 
-
-cv::Mat preProcessing(cv::Mat & img);
+cv::Mat preProcessing(cv::Mat & img, int Threshold);
 std::vector<cv::RotatedRect> getLightBars(cv::Mat & img);
 std::vector<cv::Point2f> getArmor(std::vector<cv::RotatedRect> & lightBars);
 void pnp(cv::Mat & img, std::vector<cv::Point2f> & armorPoints);
+void callBack(int val, void * valName);
 
 
 
 int main()
 {
     //读取图像
-    cv::Mat img = cv::imread("../img/pnp.jpg"); //../回到上一级目录task
+    cv::Mat img = cv::imread("../img/solvepnp.bmp"); //../回到上一级目录task
     if(img.empty())
     {
         std::cout << "Error opening" << std::endl;
         return -1;
     }
 
-    //预处理
-    cv::Mat imgPre = preProcessing(img);
+    int binaryThreshold = 0;
+    // 打包局部数据到结构体（仅用于回调函数访问，无全局共享）
+    TrackbarParams params = {
+        .image = img,        // 绑定main的局部原图
+        .Threshold = &binaryThreshold  // 绑定main的局部阈值
+    };
+    // 创建窗口和滑块（滑块绑定局部阈值，通过结构体传递数据）
+    cv::namedWindow("Trackbars", cv::WINDOW_NORMAL);
+    cv::resizeWindow("Trackbars", 400, 100);
+    cv::createTrackbar(
+        "Binary Threshold",
+        "Trackbars",
+        &binaryThreshold,  // 滑块初始位置绑定局部阈值
+        255,
+        callBack,  // 回调函数（全局，但仅访问结构体中的局部数据）
+        &params             // 传递结构体指针（回调函数通过这个访问局部数据）
+    );
+    // 初始化显示（首次执行回调逻辑）
+    callBack(binaryThreshold, &params);
 
-    //最小外接矩形
-    std::vector<cv::RotatedRect> lightBars = getLightBars(imgPre);
-    for(auto & lightBar : lightBars)
-    {
-        cv::Point2f vertices[4];
-        lightBar.points(vertices);
-        for(int i=0; i<4; i++)
-        {
-            cv::line(img, vertices[i], vertices[(i+1)%4], cv::Scalar(0,255,0), 3);
-        }
-    }
-
-    //大外接矩形
-    std::vector< cv::Point2f > armorPoints = getArmor(lightBars);
-    if(!armorPoints.empty())
-    {
-        cv::RotatedRect rect = cv::minAreaRect(armorPoints);
-        for(int i=0; i<4; i++)
-        {
-            line(img, armorPoints[i], armorPoints[(i+1)%4], cv::Scalar(0,0,255), 2);
-        }
-    }
-
-    //pnp解算
-    pnp(img, armorPoints);
-
-    resize(img, img, {}, 2, 2);
     cv::imshow("Image", img);
-    cv::imshow("ImagePre", imgPre);
     cv::waitKey(0);
-
     cv::destroyAllWindows();
 
     return 0;
@@ -61,18 +54,59 @@ int main()
 
 
 
-cv::Mat preProcessing(cv::Mat & img)
+void callBack(int val, void* valName)
+{
+    TrackbarParams* params = static_cast<TrackbarParams*>(valName);
+    if(!params) return;
+
+    *params->Threshold = val;
+
+    //预处理
+    cv::Mat imgPre = preProcessing(params->image, *params->Threshold);
+
+    cv::Mat displayImg = params->image.clone();
+    //检测灯条
+    std::vector<cv::RotatedRect> lightBars = getLightBars(imgPre);
+    for(auto & lightBar : lightBars)
+    {
+        cv::Point2f vertices[4];
+        lightBar.points(vertices);
+        for(int i=0; i<4; i++)
+        {
+            cv::line(displayImg, vertices[i], vertices[(i+1)%4], cv::Scalar(0,255,0), 3);
+        }
+    }
+
+    //检测装甲板
+    std::vector<cv::Point2f> armorPoints = getArmor(lightBars);
+    if(!armorPoints.empty())
+    {
+        cv::RotatedRect armor = cv::minAreaRect(armorPoints);
+        for(int i=0; i<4; i++)
+        {
+            line(displayImg, armorPoints[i], armorPoints[(i+1)%4], cv::Scalar(0,0,255), 2);
+        }
+    }
+
+    //pnp解算
+    pnp(displayImg, armorPoints);
+
+    //实时刷新显示
+    resize(displayImg, displayImg, {}, 2, 2);
+    cv::imshow("ImagePre", imgPre);
+    cv::imshow("displayImg", displayImg);
+}
+
+
+
+cv::Mat preProcessing(cv::Mat & img, int Threshold)
 {
     cv::Mat channels[3];
     cv::split(img, channels);
 
     //滑动条没有绑定回调函数，且阈值变量是局部变量，拖动滑动条不会触发预处理逻辑重新执行，图像不会更新
     //要实现动态调整阈值，需要调用回调函数
-    // int Threshold = 255;
-    // cv::namedWindow("Trackbars", (640, 200)); 
-    // cv::createTrackbar("Threshold", "Trackbars", &Threshold, 255);
 
-    int Threshold = 200;
     cv::Mat binary, Gaussian;
     cv::threshold(channels[2], binary, Threshold, 255, 0);
     cv::GaussianBlur(binary, Gaussian, cv::Size(5,5), 0);
@@ -115,16 +149,16 @@ std::vector<cv::Point2f> getArmor(std::vector<cv::RotatedRect> & lightBars)
     if(lightBars.size() < 2) 
         return {}; //返回一个空向量
 
-    // 获取两个灯条的中心
-    cv::Point2f center1 = lightBars[0].center;
-    cv::Point2f center2 = lightBars[1].center;
-    // 区分左右灯条（按x坐标）
-    cv::Point2f leftCenter = (center1.x < center2.x) ? center1 : center2;  // 左灯条中心
-    cv::Point2f rightCenter = (center1.x < center2.x) ? center2 : center1; // 右灯条中心
-    // 大矩形x范围 = 左灯条中心x 到 右灯条中心x（基于灯条中点）
-    //装甲板顶点（x坐标）
-    float minX = leftCenter.x;   // 左边界 = 左灯条中心x
-    float maxX = rightCenter.x;  // 右边界 = 右灯条中心x
+    // // 获取两个灯条的中心
+    // cv::Point2f center1 = lightBars[0].center;
+    // cv::Point2f center2 = lightBars[1].center;
+    // // 区分左右灯条（按x坐标）
+    // cv::Point2f leftCenter = (center1.x < center2.x) ? center1 : center2;  // 左灯条中心
+    // cv::Point2f rightCenter = (center1.x < center2.x) ? center2 : center1; // 右灯条中心
+    // // 大矩形x范围 = 左灯条中心x 到 右灯条中心x（基于灯条中点）
+    // //装甲板顶点（x坐标）
+    // float minX = leftCenter.x;   // 左边界 = 左灯条中心x
+    // float maxX = rightCenter.x;  // 右边界 = 右灯条中心x
 
     //收集所有顶点
     std::vector< cv::Point2f > allVertices;
@@ -140,15 +174,18 @@ std::vector<cv::Point2f> getArmor(std::vector<cv::RotatedRect> & lightBars)
         allVertices.push_back(pts[i]);
     }
 
-    //装甲板顶点（y坐标）
+    //装甲板顶点
+    float minX = allVertices[0].x, maxX = allVertices[0].x;
     float minY = allVertices[0].y, maxY = allVertices[0].y;
     for(auto & allVertice : allVertices)
     {
+        minX = std::min(minX, allVertice.x);
+        maxX = std::max(maxX, allVertice.x);
         minY = std::min(minY, allVertice.y);
         maxY = std::max(maxY, allVertice.y);
     }
 
-    // 构建大矩形顶点（x基于灯条中心，y基于顶点范围）
+    // 构建大矩形顶点
     std::vector< cv::Point2f > rectVertices; 
     rectVertices.push_back(cv::Point2f(minX, minY));
     rectVertices.push_back(cv::Point2f(maxX, minY));
@@ -246,93 +283,6 @@ void pnp(cv::Mat & img, std::vector<cv::Point2f> & armorPoints)
 //旋转矩阵rmat  通过 反三角函数  变为 欧拉角
 //欧拉角  变为 四元数
 
-// //（1）旋转向量—>旋转矩阵—>欧拉角
-//
-// 旋转向量转旋转矩阵
-// theta = np.linalg.norm(rvec)
-// r = rvec / theta
-// R_ = np.array([[0, -r[2][0], r[1][0]],
-//                [r[2][0], 0, -r[0][0]],
-//                [-r[1][0], r[0][0], 0]])
-// R = np.cos(theta) * np.eye(3) + (1 - np.cos(theta)) * r * r.T + np.sin(theta) * R_
-// print('旋转矩阵')
-// print(R)
-//
-//
-// 旋转矩阵转欧拉角
-// def isRotationMatrix(R):
-//     Rt = np.transpose(R)   #旋转矩阵R的转置
-//     shouldBeIdentity = np.dot(Rt, R)   #R的转置矩阵乘以R
-//     I = np.identity(3, dtype=R.dtype)           # 3阶单位矩阵
-//     n = np.linalg.norm(I - shouldBeIdentity)   #np.linalg.norm默认求二范数
-//     return n < 1e-6                            # 目的是判断矩阵R是否正交矩阵（旋转矩阵按道理须为正交矩阵，如此其返回值理论为0）
-//
-//
-// def rotationMatrixToAngles(R):
-//     assert (isRotationMatrix(R))   #判断是否是旋转矩阵（用到正交矩阵特性）
-// 
-//     sy = math.sqrt(R[0, 0] * R[0, 0] + R[1, 0] * R[1, 0])  #矩阵元素下标都从0开始（对应公式中是sqrt(r11*r11+r21*r21)），sy=sqrt(cosβ*cosβ)
-// 
-//     singular = sy < 1e-6   # 判断β是否为正负90°
-// 
-//     if not singular:   #β不是正负90°
-//         x = math.atan2(R[2, 1], R[2, 2])
-//         y = math.atan2(-R[2, 0], sy)
-//         z = math.atan2(R[1, 0], R[0, 0])
-//     else:              #β是正负90°
-//         x = math.atan2(-R[1, 2], R[1, 1])
-//         y = math.atan2(-R[2, 0], sy)   #当z=0时，此公式也OK，上面图片中的公式也是OK的
-//         z = 0
-//    
-//     x = x*180.0/3.141592653589793
-//     y = y*180.0/3.141592653589793
-//     z = z*180.0/3.141592653589793
-// 
-//     return np.array([x, y, z])
-
-// // （2）旋转向量—>四元数—>欧拉角
-// # 从旋转向量转换为欧拉角
-// def get_euler_angle(rotation_vector):
-//     # calculate rotation angles
-//     theta = cv2.norm(rotation_vector, cv2.NORM_L2)
-//    
-//     # transformed to quaterniond
-//     w = math.cos(theta / 2)
-//     x = math.sin(theta / 2)*rotation_vector[0][0] / theta
-//     y = math.sin(theta / 2)*rotation_vector[1][0] / theta
-//     z = math.sin(theta / 2)*rotation_vector[2][0] / theta
-//    
-//     ysqr = y * y
-//     # pitch (x-axis rotation)
-//     t0 = 2.0 * (w * x + y * z)
-//     t1 = 1.0 - 2.0 * (x * x + ysqr)
-//     print('t0:{}, t1:{}'.format(t0, t1))
-//     pitch = math.atan2(t0, t1)
-//    
-//     # yaw (y-axis rotation)
-//     t2 = 2.0 * (w * y - z * x)
-//     if t2 > 1.0:
-//         t2 = 1.0
-//     if t2 < -1.0:
-//         t2 = -1.0
-//     yaw = math.asin(t2)
-//    
-//     # roll (z-axis rotation)
-//     t3 = 2.0 * (w * z + x * y)
-//     t4 = 1.0 - 2.0 * (ysqr + z * z)
-//     roll = math.atan2(t3, t4)
-//    
-//     print('pitch:{}, yaw:{}, roll:{}'.format(pitch, yaw, roll))
-//    
-// 	# 单位转换：将弧度转换为度
-//     Y = int((pitch/math.pi)*180)
-//     X = int((yaw/math.pi)*180)
-//     Z = int((roll/math.pi)*180)
-//    
-//     return 0, Y, X, Z
-
-
-
 //欧拉角 
 //pitch：俯仰角，表示物体绕x轴旋转
 //yaw：偏航角，表示物体绕y轴旋转
@@ -341,3 +291,40 @@ void pnp(cv::Mat & img, std::vector<cv::Point2f> & armorPoints)
 // Z 轴：相机光轴方向（指向拍摄物体，向前为正），yaw；
 // Y 轴：相机竖直方向（向上为正，与 Z 轴垂直），pitch；
 // X 轴：相机水平方向（向右为正，与 Z、Y 轴构成右手坐标系），roll
+
+// bool solvePnP(
+//     InputArray objectPoints,   // 3D世界点集合（vector<Point3f>）
+//     InputArray imagePoints,    // 对应的2D图像点集合（vector<Point2f>）
+//     InputArray cameraMatrix,   // 相机内参矩阵（标定得到）
+//     InputArray distCoeffs,     // 相机畸变系数（标定得到，无畸变时可传Mat::zeros）
+//     OutputArray rvec,          // 输出旋转向量（Rodrigues向量，可转换为旋转矩阵）
+//     OutputArray tvec,          // 输出平移向量（相机坐标系下物体的位置）
+//     bool useExtrinsicGuess = false,  // 是否使用外部位姿初值（一般为false）
+//     int flags = SOLVEPNP_ITERATIVE   // 求解方法（如迭代法、P3P法等）
+// );
+//
+// cameraMatrix：相机内参矩阵，通过cv::calibrateCamera标定得到(fx/fy是焦距，cx/cy是图像中心) 
+// cv::Mat_<double>(3,3)
+// [fx,  0,  cx;
+//  0,  fy, cy;
+//  0,   0,  1]
+// cv::Mat camera_matrix = (cv::Mat_<double>(3,3) << fx, 0, cx, 0, fy, cy, 0, 0, 1); 
+//
+// distCoeffs：相机畸变系数，标定后得到（如[k1, k2, p1, p2, k3]）
+// cv::Mat distort_coeffs = (cv::Mat_<double>(1,5) << k1, k2, p1, p2, k3);
+//
+// flags：
+// SOLVEPNP_ITERATIVE：迭代法（鲁棒性强，需至少 4 个点）
+// SOLVEPNP_P3P：P3P 法（仅需 3 个点，对噪声敏感）
+
+//解算pnp步骤
+// 1. 世界坐标系中的三维点
+//    std::vector<cv::Point3f> object_points
+// 2. 图像上的二维点
+//    std::vector<cv::Point2f> img_points
+// 3. 自定义的物体世界坐标系（mm）
+//    std::vector<cv::Point3f> obj = std::vector<cv::Point3f>
+// 4. 创建相机内参数矩阵
+//    cv::Mat camera_matrix = (cv::Mat_<double>(3,3) << fx, 0, cx, 0, fy, cy, 0, 0, 1);  
+// 5. 创建相机畸变系数矩阵
+//    cv::Mat distort_coeffs = (cv::Mat_<double>(1,5) << k1, k2, p1, p2, k3);

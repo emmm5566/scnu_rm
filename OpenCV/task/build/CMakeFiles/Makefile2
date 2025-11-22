@@ -63,18 +63,11 @@ CMAKE_BINARY_DIR = /home/emmm/Desktop/scnu_rm/OpenCV/task/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/t.dir/all
-all: CMakeFiles/tt.dir/all
-all: CMakeFiles/test.dir/all
-all: CMakeFiles/temp.dir/all
 all: CMakeFiles/main.dir/all
 all: CMakeFiles/task.dir/all
 all: CMakeFiles/pnp.dir/all
 all: CMakeFiles/solvepnp.dir/all
 all: CMakeFiles/solvePnP.dir/all
-all: CMakeFiles/armor_pose_estimation.dir/all
-all: CMakeFiles/color_detection.dir/all
-all: CMakeFiles/edge_contour_detection.dir/all
 all: CMakeFiles/armor_detect.dir/all
 .PHONY : all
 
@@ -83,124 +76,13 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/t.dir/clean
-clean: CMakeFiles/tt.dir/clean
-clean: CMakeFiles/test.dir/clean
-clean: CMakeFiles/temp.dir/clean
 clean: CMakeFiles/main.dir/clean
 clean: CMakeFiles/task.dir/clean
 clean: CMakeFiles/pnp.dir/clean
 clean: CMakeFiles/solvepnp.dir/clean
 clean: CMakeFiles/solvePnP.dir/clean
-clean: CMakeFiles/armor_pose_estimation.dir/clean
-clean: CMakeFiles/color_detection.dir/clean
-clean: CMakeFiles/edge_contour_detection.dir/clean
 clean: CMakeFiles/armor_detect.dir/clean
 .PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/t.dir
-
-# All Build rule for target.
-CMakeFiles/t.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=17,18 "Built target t"
-.PHONY : CMakeFiles/t.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/t.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/t.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 0
-.PHONY : CMakeFiles/t.dir/rule
-
-# Convenience name for target.
-t : CMakeFiles/t.dir/rule
-.PHONY : t
-
-# clean rule for target.
-CMakeFiles/t.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/clean
-.PHONY : CMakeFiles/t.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/tt.dir
-
-# All Build rule for target.
-CMakeFiles/tt.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=25,26 "Built target tt"
-.PHONY : CMakeFiles/tt.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/tt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tt.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 0
-.PHONY : CMakeFiles/tt.dir/rule
-
-# Convenience name for target.
-tt: CMakeFiles/tt.dir/rule
-.PHONY : tt
-
-# clean rule for target.
-CMakeFiles/tt.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/clean
-.PHONY : CMakeFiles/tt.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/test.dir
-
-# All Build rule for target.
-CMakeFiles/test.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=23,24 "Built target test"
-.PHONY : CMakeFiles/test.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 0
-.PHONY : CMakeFiles/test.dir/rule
-
-# Convenience name for target.
-test: CMakeFiles/test.dir/rule
-.PHONY : test
-
-# clean rule for target.
-CMakeFiles/test.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
-.PHONY : CMakeFiles/test.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/temp.dir
-
-# All Build rule for target.
-CMakeFiles/temp.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temp.dir/build.make CMakeFiles/temp.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temp.dir/build.make CMakeFiles/temp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=21,22 "Built target temp"
-.PHONY : CMakeFiles/temp.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/temp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/temp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 0
-.PHONY : CMakeFiles/temp.dir/rule
-
-# Convenience name for target.
-temp: CMakeFiles/temp.dir/rule
-.PHONY : temp
-
-# clean rule for target.
-CMakeFiles/temp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temp.dir/build.make CMakeFiles/temp.dir/clean
-.PHONY : CMakeFiles/temp.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/main.dir
@@ -209,7 +91,7 @@ CMakeFiles/temp.dir/clean:
 CMakeFiles/main.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=9,10 "Built target main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=3,4 "Built target main"
 .PHONY : CMakeFiles/main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -235,7 +117,7 @@ CMakeFiles/main.dir/clean:
 CMakeFiles/task.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=19,20 "Built target task"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=11,12 "Built target task"
 .PHONY : CMakeFiles/task.dir/all
 
 # Build rule for subdir invocation for target.
@@ -261,7 +143,7 @@ CMakeFiles/task.dir/clean:
 CMakeFiles/pnp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pnp.dir/build.make CMakeFiles/pnp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pnp.dir/build.make CMakeFiles/pnp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=11,12 "Built target pnp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=5,6 "Built target pnp"
 .PHONY : CMakeFiles/pnp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -287,7 +169,7 @@ CMakeFiles/pnp.dir/clean:
 CMakeFiles/solvepnp.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solvepnp.dir/build.make CMakeFiles/solvepnp.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solvepnp.dir/build.make CMakeFiles/solvepnp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=15,16 "Built target solvepnp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=9,10 "Built target solvepnp"
 .PHONY : CMakeFiles/solvepnp.dir/all
 
 # Build rule for subdir invocation for target.
@@ -313,7 +195,7 @@ CMakeFiles/solvepnp.dir/clean:
 CMakeFiles/solvePnP.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solvePnP.dir/build.make CMakeFiles/solvePnP.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solvePnP.dir/build.make CMakeFiles/solvePnP.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=13,14 "Built target solvePnP"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=7,8 "Built target solvePnP"
 .PHONY : CMakeFiles/solvePnP.dir/all
 
 # Build rule for subdir invocation for target.
@@ -331,84 +213,6 @@ solvePnP: CMakeFiles/solvePnP.dir/rule
 CMakeFiles/solvePnP.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solvePnP.dir/build.make CMakeFiles/solvePnP.dir/clean
 .PHONY : CMakeFiles/solvePnP.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/armor_pose_estimation.dir
-
-# All Build rule for target.
-CMakeFiles/armor_pose_estimation.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_pose_estimation.dir/build.make CMakeFiles/armor_pose_estimation.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_pose_estimation.dir/build.make CMakeFiles/armor_pose_estimation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=3,4 "Built target armor_pose_estimation"
-.PHONY : CMakeFiles/armor_pose_estimation.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/armor_pose_estimation.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/armor_pose_estimation.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 0
-.PHONY : CMakeFiles/armor_pose_estimation.dir/rule
-
-# Convenience name for target.
-armor_pose_estimation: CMakeFiles/armor_pose_estimation.dir/rule
-.PHONY : armor_pose_estimation
-
-# clean rule for target.
-CMakeFiles/armor_pose_estimation.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_pose_estimation.dir/build.make CMakeFiles/armor_pose_estimation.dir/clean
-.PHONY : CMakeFiles/armor_pose_estimation.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/color_detection.dir
-
-# All Build rule for target.
-CMakeFiles/color_detection.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detection.dir/build.make CMakeFiles/color_detection.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detection.dir/build.make CMakeFiles/color_detection.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=5,6 "Built target color_detection"
-.PHONY : CMakeFiles/color_detection.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/color_detection.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/color_detection.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 0
-.PHONY : CMakeFiles/color_detection.dir/rule
-
-# Convenience name for target.
-color_detection: CMakeFiles/color_detection.dir/rule
-.PHONY : color_detection
-
-# clean rule for target.
-CMakeFiles/color_detection.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detection.dir/build.make CMakeFiles/color_detection.dir/clean
-.PHONY : CMakeFiles/color_detection.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/edge_contour_detection.dir
-
-# All Build rule for target.
-CMakeFiles/edge_contour_detection.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/edge_contour_detection.dir/build.make CMakeFiles/edge_contour_detection.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/edge_contour_detection.dir/build.make CMakeFiles/edge_contour_detection.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles --progress-num=7,8 "Built target edge_contour_detection"
-.PHONY : CMakeFiles/edge_contour_detection.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/edge_contour_detection.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/edge_contour_detection.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/emmm/Desktop/scnu_rm/OpenCV/task/build/CMakeFiles 0
-.PHONY : CMakeFiles/edge_contour_detection.dir/rule
-
-# Convenience name for target.
-edge_contour_detection: CMakeFiles/edge_contour_detection.dir/rule
-.PHONY : edge_contour_detection
-
-# clean rule for target.
-CMakeFiles/edge_contour_detection.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/edge_contour_detection.dir/build.make CMakeFiles/edge_contour_detection.dir/clean
-.PHONY : CMakeFiles/edge_contour_detection.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/armor_detect.dir

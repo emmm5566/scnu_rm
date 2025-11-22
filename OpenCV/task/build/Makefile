@@ -117,58 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named t
-
-# Build rule for target.
-t : cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 t
-.PHONY : t
-
-# fast build rule for target.
-t/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/build
-.PHONY : t/fast
-
-#=============================================================================
-# Target rules for targets named tt
-
-# Build rule for target.
-tt: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tt
-.PHONY : tt
-
-# fast build rule for target.
-tt/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/build
-.PHONY : tt/fast
-
-#=============================================================================
-# Target rules for targets named test
-
-# Build rule for target.
-test: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
-.PHONY : test
-
-# fast build rule for target.
-test/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-.PHONY : test/fast
-
-#=============================================================================
-# Target rules for targets named temp
-
-# Build rule for target.
-temp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 temp
-.PHONY : temp
-
-# fast build rule for target.
-temp/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temp.dir/build.make CMakeFiles/temp.dir/build
-.PHONY : temp/fast
-
-#=============================================================================
 # Target rules for targets named main
 
 # Build rule for target.
@@ -234,45 +182,6 @@ solvePnP/fast:
 .PHONY : solvePnP/fast
 
 #=============================================================================
-# Target rules for targets named armor_pose_estimation
-
-# Build rule for target.
-armor_pose_estimation: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 armor_pose_estimation
-.PHONY : armor_pose_estimation
-
-# fast build rule for target.
-armor_pose_estimation/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_pose_estimation.dir/build.make CMakeFiles/armor_pose_estimation.dir/build
-.PHONY : armor_pose_estimation/fast
-
-#=============================================================================
-# Target rules for targets named color_detection
-
-# Build rule for target.
-color_detection: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 color_detection
-.PHONY : color_detection
-
-# fast build rule for target.
-color_detection/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detection.dir/build.make CMakeFiles/color_detection.dir/build
-.PHONY : color_detection/fast
-
-#=============================================================================
-# Target rules for targets named edge_contour_detection
-
-# Build rule for target.
-edge_contour_detection: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 edge_contour_detection
-.PHONY : edge_contour_detection
-
-# fast build rule for target.
-edge_contour_detection/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/edge_contour_detection.dir/build.make CMakeFiles/edge_contour_detection.dir/build
-.PHONY : edge_contour_detection/fast
-
-#=============================================================================
 # Target rules for targets named armor_detect
 
 # Build rule for target.
@@ -308,78 +217,6 @@ src/TJ-SuperPower/armor_detect.s: src/TJ-SuperPower/armor_detect.cpp.s
 src/TJ-SuperPower/armor_detect.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_detect.dir/build.make CMakeFiles/armor_detect.dir/src/TJ-SuperPower/armor_detect.cpp.s
 .PHONY : src/TJ-SuperPower/armor_detect.cpp.s
-
-src/mine/armor_pose_estimation.o: src/mine/armor_pose_estimation.cpp.o
-.PHONY : src/mine/armor_pose_estimation.o
-
-# target to build an object file
-src/mine/armor_pose_estimation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_pose_estimation.dir/build.make CMakeFiles/armor_pose_estimation.dir/src/mine/armor_pose_estimation.cpp.o
-.PHONY : src/mine/armor_pose_estimation.cpp.o
-
-src/mine/armor_pose_estimation.i: src/mine/armor_pose_estimation.cpp.i
-.PHONY : src/mine/armor_pose_estimation.i
-
-# target to preprocess a source file
-src/mine/armor_pose_estimation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_pose_estimation.dir/build.make CMakeFiles/armor_pose_estimation.dir/src/mine/armor_pose_estimation.cpp.i
-.PHONY : src/mine/armor_pose_estimation.cpp.i
-
-src/mine/armor_pose_estimation.s: src/mine/armor_pose_estimation.cpp.s
-.PHONY : src/mine/armor_pose_estimation.s
-
-# target to generate assembly for a file
-src/mine/armor_pose_estimation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/armor_pose_estimation.dir/build.make CMakeFiles/armor_pose_estimation.dir/src/mine/armor_pose_estimation.cpp.s
-.PHONY : src/mine/armor_pose_estimation.cpp.s
-
-src/mine/color_detection.o: src/mine/color_detection.cpp.o
-.PHONY : src/mine/color_detection.o
-
-# target to build an object file
-src/mine/color_detection.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detection.dir/build.make CMakeFiles/color_detection.dir/src/mine/color_detection.cpp.o
-.PHONY : src/mine/color_detection.cpp.o
-
-src/mine/color_detection.i: src/mine/color_detection.cpp.i
-.PHONY : src/mine/color_detection.i
-
-# target to preprocess a source file
-src/mine/color_detection.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detection.dir/build.make CMakeFiles/color_detection.dir/src/mine/color_detection.cpp.i
-.PHONY : src/mine/color_detection.cpp.i
-
-src/mine/color_detection.s: src/mine/color_detection.cpp.s
-.PHONY : src/mine/color_detection.s
-
-# target to generate assembly for a file
-src/mine/color_detection.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/color_detection.dir/build.make CMakeFiles/color_detection.dir/src/mine/color_detection.cpp.s
-.PHONY : src/mine/color_detection.cpp.s
-
-src/mine/edge_contour_detection.o: src/mine/edge_contour_detection.cpp.o
-.PHONY : src/mine/edge_contour_detection.o
-
-# target to build an object file
-src/mine/edge_contour_detection.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/edge_contour_detection.dir/build.make CMakeFiles/edge_contour_detection.dir/src/mine/edge_contour_detection.cpp.o
-.PHONY : src/mine/edge_contour_detection.cpp.o
-
-src/mine/edge_contour_detection.i: src/mine/edge_contour_detection.cpp.i
-.PHONY : src/mine/edge_contour_detection.i
-
-# target to preprocess a source file
-src/mine/edge_contour_detection.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/edge_contour_detection.dir/build.make CMakeFiles/edge_contour_detection.dir/src/mine/edge_contour_detection.cpp.i
-.PHONY : src/mine/edge_contour_detection.cpp.i
-
-src/mine/edge_contour_detection.s: src/mine/edge_contour_detection.cpp.s
-.PHONY : src/mine/edge_contour_detection.s
-
-# target to generate assembly for a file
-src/mine/edge_contour_detection.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/edge_contour_detection.dir/build.make CMakeFiles/edge_contour_detection.dir/src/mine/edge_contour_detection.cpp.s
-.PHONY : src/mine/edge_contour_detection.cpp.s
 
 src/mine/main.o: src/mine/main.cpp.o
 .PHONY : src/mine/main.o
@@ -501,102 +338,6 @@ src/mine/task.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/task.dir/build.make CMakeFiles/task.dir/src/mine/task.cpp.s
 .PHONY : src/mine/task.cpp.s
 
-src/mine/temp.o: src/mine/temp.cpp.o
-.PHONY : src/mine/temp.o
-
-# target to build an object file
-src/mine/temp.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temp.dir/build.make CMakeFiles/temp.dir/src/mine/temp.cpp.o
-.PHONY : src/mine/temp.cpp.o
-
-src/mine/temp.i: src/mine/temp.cpp.i
-.PHONY : src/mine/temp.i
-
-# target to preprocess a source file
-src/mine/temp.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temp.dir/build.make CMakeFiles/temp.dir/src/mine/temp.cpp.i
-.PHONY : src/mine/temp.cpp.i
-
-src/mine/temp.s: src/mine/temp.cpp.s
-.PHONY : src/mine/temp.s
-
-# target to generate assembly for a file
-src/mine/temp.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/temp.dir/build.make CMakeFiles/temp.dir/src/mine/temp.cpp.s
-.PHONY : src/mine/temp.cpp.s
-
-src/mine/test.o: src/mine/test.cpp.o
-.PHONY : src/mine/test.o
-
-# target to build an object file
-src/mine/test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/mine/test.cpp.o
-.PHONY : src/mine/test.cpp.o
-
-src/mine/test.i: src/mine/test.cpp.i
-.PHONY : src/mine/test.i
-
-# target to preprocess a source file
-src/mine/test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/mine/test.cpp.i
-.PHONY : src/mine/test.cpp.i
-
-src/mine/test.s: src/mine/test.cpp.s
-.PHONY : src/mine/test.s
-
-# target to generate assembly for a file
-src/mine/test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/mine/test.cpp.s
-.PHONY : src/mine/test.cpp.s
-
-src/t.o: src/t.cpp.o
-.PHONY : src/t.o
-
-# target to build an object file
-src/t.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/src/t.cpp.o
-.PHONY : src/t.cpp.o
-
-src/t.i: src/t.cpp.i
-.PHONY : src/t.i
-
-# target to preprocess a source file
-src/t.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/src/t.cpp.i
-.PHONY : src/t.cpp.i
-
-src/t.s: src/t.cpp.s
-.PHONY : src/t.s
-
-# target to generate assembly for a file
-src/t.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/t.dir/build.make CMakeFiles/t.dir/src/t.cpp.s
-.PHONY : src/t.cpp.s
-
-src/tt.o: src/tt.cpp.o
-.PHONY : src/tt.o
-
-# target to build an object file
-src/tt.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/src/tt.cpp.o
-.PHONY : src/tt.cpp.o
-
-src/tt.i: src/tt.cpp.i
-.PHONY : src/tt.i
-
-# target to preprocess a source file
-src/tt.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/src/tt.cpp.i
-.PHONY : src/tt.cpp.i
-
-src/tt.s: src/tt.cpp.s
-.PHONY : src/tt.s
-
-# target to generate assembly for a file
-src/tt.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/tt.dir/build.make CMakeFiles/tt.dir/src/tt.cpp.s
-.PHONY : src/tt.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -606,30 +347,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... armor_detect"
-	@echo "... armor_pose_estimation"
-	@echo "... color_detection"
-	@echo "... edge_contour_detection"
 	@echo "... main"
 	@echo "... pnp"
 	@echo "... solvePnP"
 	@echo "... solvepnp"
-	@echo "... t"
 	@echo "... task"
-	@echo "... temp"
-	@echo "... test"
-	@echo "... tt"
 	@echo "... src/TJ-SuperPower/armor_detect.o"
 	@echo "... src/TJ-SuperPower/armor_detect.i"
 	@echo "... src/TJ-SuperPower/armor_detect.s"
-	@echo "... src/mine/armor_pose_estimation.o"
-	@echo "... src/mine/armor_pose_estimation.i"
-	@echo "... src/mine/armor_pose_estimation.s"
-	@echo "... src/mine/color_detection.o"
-	@echo "... src/mine/color_detection.i"
-	@echo "... src/mine/color_detection.s"
-	@echo "... src/mine/edge_contour_detection.o"
-	@echo "... src/mine/edge_contour_detection.i"
-	@echo "... src/mine/edge_contour_detection.s"
 	@echo "... src/mine/main.o"
 	@echo "... src/mine/main.i"
 	@echo "... src/mine/main.s"
@@ -645,18 +370,6 @@ help:
 	@echo "... src/mine/task.o"
 	@echo "... src/mine/task.i"
 	@echo "... src/mine/task.s"
-	@echo "... src/mine/temp.o"
-	@echo "... src/mine/temp.i"
-	@echo "... src/mine/temp.s"
-	@echo "... src/mine/test.o"
-	@echo "... src/mine/test.i"
-	@echo "... src/mine/test.s"
-	@echo "... src/t.o"
-	@echo "... src/t.i"
-	@echo "... src/t.s"
-	@echo "... src/tt.o"
-	@echo "... src/tt.i"
-	@echo "... src/tt.s"
 .PHONY : help
 
 
